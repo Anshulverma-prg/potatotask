@@ -1,0 +1,13 @@
+services:
+  elasticsearch:
+    image: elasticsearch:8.0.0
+    ports:
+      - "9200:9200"
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./data:/app/data  # Add this line
