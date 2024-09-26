@@ -39,4 +39,3 @@ Command-  docker-compose up --build
 ## Query the API
 curl "http://localhost:5000/query?term=music"
 
-
